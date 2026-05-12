@@ -1,3 +1,5 @@
+package com.spaceinvaders.game;
+
 /** Holds game configuration constants. */
 public class Settings {
     // "public" means this variable can be accessed from any other class (like GameManager)

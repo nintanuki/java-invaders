@@ -1,3 +1,5 @@
+package com.spaceinvaders.game;
+
 /** Entry point of the application. */
 public class Main {
     

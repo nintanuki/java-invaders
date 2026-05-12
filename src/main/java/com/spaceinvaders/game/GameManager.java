@@ -1,3 +1,5 @@
+package com.spaceinvaders.game;
+
 /** Handles the main game loop and game state. */
 public class GameManager {
     private boolean isRunning; // This will control our main loop
