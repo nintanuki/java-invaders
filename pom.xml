@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    pom.xml — Maven's project file.
+
+    PYTHON ANALOGY: this is like a combination of `pyproject.toml`/`setup.py`
+    (it identifies the project) and `requirements.txt` (it lists dependencies).
+    Maven reads this file to know how to compile, package, and run the project.
+
+    We deliberately depend on NOTHING external here. The window we draw uses
+    Java Swing/AWT, which ship inside the JDK itself — no downloads needed.
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- groupId + artifactId + version uniquely identify this project, like
+         (org_name, package_name, version) on PyPI. -->
     <groupId>com.spaceinvaders</groupId>
     <artifactId>java-invaders</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <gdx.version>1.12.1</gdx.version>
+        <!-- Compile against Java 11. If `java -version` on your machine shows
+             11 or higher you are fine. Bump these two numbers if you want to
+             target a newer language version. -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx</artifactId>
-            <version>${gdx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-backend-lwjgl3</artifactId>
-            <version>${gdx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-platform</artifactId>
-            <version>${gdx.version}</version>
-            <classifier>natives-desktop</classifier>
-        </dependency>
-    </dependencies>
+    <!-- No <dependencies> block on purpose. Swing/AWT live inside the JDK. -->
+
+    <build>
+        <plugins>
+            <!--
+                exec-maven-plugin lets us launch the game with one command:
+                    mvn compile exec:java
+                It reads <mainClass> below to know which class has main().
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.spaceinvaders.game.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

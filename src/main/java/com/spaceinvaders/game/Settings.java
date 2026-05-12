@@ -1,11 +1,38 @@
-package com.spaceinvaders.game; // This line declares the package name. It helps organize your code and avoid naming conflicts.
+package com.spaceinvaders.game;
 
-/** Holds game configuration constants. */
+/**
+ * Centralized configuration for Java Invaders.
+ *
+ * <p>This mirrors {@code settings.py} from the Python original: every tuning
+ * value the game cares about lives here so that sprites, the renderer, and the
+ * main loop can read constants from one place instead of hard-coding numbers.
+ *
+ * <p><b>Python -> Java translation:</b>
+ * <ul>
+ *   <li>{@code public}  = visible to any other class (like a top-level name in Python).</li>
+ *   <li>{@code static}  = belongs to the class itself, not an instance. You read
+ *       it as {@code Settings.SCREEN_WIDTH}, never {@code new Settings().SCREEN_WIDTH}.</li>
+ *   <li>{@code final}   = the value cannot be reassigned. Java's closest thing
+ *       to a Python constant.</li>
+ * </ul>
+ */
 public class Settings {
-    // "public" means this variable can be accessed from any other class (like GameManager)
-    // "static" means you don't need to create a "new Settings()" to use it
-    // "final" is like a constant in Python (it can't be changed)
-    public static final String GAME_TITLE = "Space Invaders - Java Edition";
-    public static final int SCREEN_WIDTH = 800;
-    public static final int SCREEN_HEIGHT = 600;
+
+  // Window
+  public static final String GAME_TITLE = "Space Invaders - Java Edition";
+  public static final int SCREEN_WIDTH = 800;
+  public static final int SCREEN_HEIGHT = 600;
+
+  // Frame pacing. 60 FPS -> ~16 ms between frames. Swing's Timer takes
+  // milliseconds, so we store the period directly to avoid arithmetic later.
+  public static final int FPS = 60;
+  public static final int FRAME_DELAY_MS = 1000 / FPS;
+
+  // Background fill (R, G, B 0-255). Matches the Python ColorSettings.BG_FILL.
+  public static final int BG_R = 30;
+  public static final int BG_G = 30;
+  public static final int BG_B = 30;
+
+  /** Private constructor: nobody should ever instantiate Settings. */
+  private Settings() {}
 }
