@@ -1,9 +1,7 @@
 # java-invaders
 
-Space Invaders made in Java — a port of the [Python/pygame
-original](../arcade-cabinet/games/sponsor/tutorial/space-invaders) that lives
-next door. The goal here is to learn Java by rebuilding a game I already
-understand, so the structure intentionally mirrors the Python project file by
+Space Invaders made in Java: a port of the [Python/pygame
+version](https://github.com/nintanuki/arcade-cabinet/tree/main/games/sponsor/tutorial/space-invaders) made from the [Clear Code YouTube tutorial](https://www.youtube.com/watch?v=o-6pADy5Mdg). The goal here is to practice Java by rebuilding a game I already understand, so the structure intentionally mirrors the Python project file by
 file.
 
 > **Current state:** a blank window opens at 800x600 and runs at 60 FPS. That

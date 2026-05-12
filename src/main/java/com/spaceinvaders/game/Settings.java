@@ -33,6 +33,9 @@ public class Settings {
   public static final int BG_G = 30;
   public static final int BG_B = 30;
 
-  /** Private constructor: nobody should ever instantiate Settings. */
+  /** Private constructor:
+   * without this Java would generate a default public constructor,
+   * and then anyone could instantiate Settings.
+   * */
   private Settings() {}
 }

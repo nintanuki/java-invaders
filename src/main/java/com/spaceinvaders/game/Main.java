@@ -1,6 +1,6 @@
 package com.spaceinvaders.game;
 
-import javax.swing.JFrame;
+import javax.swing.JFrame; // The main window class in Swing. It can hold other components and has a title bar, borders, etc.
 import javax.swing.SwingUtilities;
 
 /**
