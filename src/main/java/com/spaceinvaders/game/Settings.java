@@ -1,4 +1,4 @@
-package com.spaceinvaders.game;
+package com.spaceinvaders.game; // This line declares the package name. It helps organize your code and avoid naming conflicts.
 
 /** Holds game configuration constants. */
 public class Settings {
