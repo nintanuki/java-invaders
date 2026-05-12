@@ -1,8 +1,8 @@
-/** Entry point of the application. */
+/** Main class: Entry point of the application */
 public class Main {
     
     /**
-     * Main method: This is where the program starts execution.
+     * Main method: Entry point of the application
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
