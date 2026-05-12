@@ -4,7 +4,6 @@ public class Main {
     /**
      * Main method: Entry point of the application
      * @param args Command-line arguments
-     * @return void
      */
     public static void main(String[] args) {
         // This is the Java equivalent of Python's "if __name__ == '__main__':"

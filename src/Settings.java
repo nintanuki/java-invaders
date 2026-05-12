@@ -1,3 +1,4 @@
+/** Settings class: Holds game configuration constants */
 public class Settings {
     // "public" means this variable can be accessed from any other class (like GameManager)
     // "static" means you don't need to create a "new Settings()" to use it
