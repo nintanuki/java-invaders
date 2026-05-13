@@ -12,7 +12,7 @@ one runs without errors.** That's the discipline the first attempt missed.
 
 ## Milestone 0 — Blank window ✅ (you are here)
 
-A 600x600 window opens, painted dark grey, ticking at 60 FPS. No sprites,
+A 800x600 window opens, painted dark grey, ticking at 60 FPS. No sprites,
 no input, no game logic. The point of this milestone is to prove the
 toolchain works: `mvn compile exec:java` should produce a window.
 

@@ -37,7 +37,7 @@ public class Main {
 
   /** Build the JFrame, attach the game panel, and display it. */
   private static void createAndShowWindow() {
-    JFrame window = new JFrame(Settings.GAME_TITLE);
+    JFrame window = new JFrame(Settings.Window.GAME_TITLE);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setResizable(false);
 

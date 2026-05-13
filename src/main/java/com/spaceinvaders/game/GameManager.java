@@ -37,13 +37,13 @@ public class GameManager extends JPanel {
   public GameManager() {
     // setPreferredSize tells the parent window how big we want to be. The
     // JFrame's pack() call in Main respects this number.
-    setPreferredSize(new Dimension(Settings.SCREEN_WIDTH, Settings.SCREEN_HEIGHT));
-    setBackground(new Color(Settings.BG_R, Settings.BG_G, Settings.BG_B));
+    setPreferredSize(new Dimension(Settings.Window.WIDTH, Settings.Window.HEIGHT));
+    setBackground(Settings.Colors.BACKGROUND);
 
     // The timer fires an action every FRAME_DELAY_MS. The lambda is the
     // callback — same idea as `pygame.time.set_timer(event, ms)` plus the
     // handler, fused into one expression.
-    frameTimer = new Timer(Settings.FRAME_DELAY_MS, e -> tick());
+    frameTimer = new Timer(Settings.Window.FRAME_DELAY_MS, e -> tick());
   }
 
   /** Start the frame timer. Called by {@link Main} once the window is visible. */
