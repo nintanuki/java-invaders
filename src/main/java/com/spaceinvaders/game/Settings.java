@@ -200,7 +200,11 @@ public class Settings {
    * ===========================================================================
    */
   public static class Paths {
-    public static final String RESOURCE_DIR = "src/main/resources//";
+    // In Java, resource paths are typically relative to the classpath.
+    // The leading slash means "start from the root of the classpath".
+    // So if your resources are in src/main/resources, and you have src/main/resources/graphics/player.png,
+    // then the path to that resource would be "/graphics/player.png".
+    public static final String RESOURCE_DIR = "/"; // src/main/resources/ is assumed to be the root for resources by Maven
 
     // Subdirectories for organization; these are concatenated with RESOURCE_DIR to
     // form the full path to each asset.

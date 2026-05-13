@@ -10,7 +10,7 @@ one runs without errors.** That's the discipline the first attempt missed.
 
 ---
 
-## Milestone 0 — Blank window ✅ (you are here)
+## Milestone 0 — Blank window ✅ (complete)
 
 A 800x600 window opens, painted dark grey, ticking at 60 FPS. No sprites,
 no input, no game logic. The point of this milestone is to prove the
@@ -27,7 +27,7 @@ If this doesn't run cleanly, fix it before continuing. Common failure modes:
 
 ---
 
-## Milestone 1 — Draw the player ship
+## Milestone 1 — Draw the player ship ✅ (complete)
 
 Goal: a single player sprite shows up centered along the bottom of the
 window. Nothing moves yet.
